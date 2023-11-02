@@ -1,0 +1,291 @@
+.blocker{
+  z-index: 99999;
+}
+.w_100 {
+    width: 100%;
+}
+
+.logo_pc, .photo{
+  img{
+    max-width: 100%;
+  }
+}
+.fz-10{
+  font-size: 10px;
+}
+.mw--100{
+  max-width: 900px;
+  margin: auto;
+}
+
+@-webkit-keyframes animatedown {
+    0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+    100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}
+
+
+@keyframes animatedown {
+    0%{-webkit-transform:translateY(-100%);transform:translateY(-100%)}
+    100%{-webkit-transform:translateY(0);transform:translateY(0)}
+}
+
+
+//.fixed {
+//    position: fixed;
+//    top: 0px;
+//    z-index: 99;
+//    width: 100%;
+//    -webkit-transition: top 0.3s;
+//    transition: top 0.3s;
+//    -webkit-animation: animatedown 0.6s;
+//            animation: animatedown 0.6s;
+//}
+.clearfix::before, .clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+[class^='clearfix'] {
+    clear: both;
+    display: block;
+}
+.clearfix-60{
+    height: 60px;
+}
+
+.container {
+  max-width: 1550px;
+  @media (max-width: 1700px) {
+    max-width: 100%;
+    padding: 0 100px;
+  }
+  @media (max-width: 1364px) {
+    padding: 0 40px;
+  }
+  @media (max-width: 767px) {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width:575.98px) {
+  .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .row{
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+}
+
+ //======================================= media query======================================\\
+
+
+.radio-cus{
+  //font-weight: bold;
+  color: #353840;
+  font-size: 16px;
+  input{
+    display: none;
+  }
+  .radio-mask{
+    width: 20px;
+    height: 20px;
+    background: #FCFCFC;
+    border: 2px solid rgba(111, 118, 126, 0.4);
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    position: relative;
+    &:before{
+      content: '';
+      width: 10px;
+      height: 10px;
+      background: #398F96;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      border-radius: 50%;
+      display: block;
+      transition: all 0.1s linear;
+      transform: scale(0);
+    }
+  }
+  input:checked ~ .radio-mask{
+    border-color: #398F96;
+    //color: #000;
+  }
+  input:checked ~ .radio-mask ~ *{
+    color: #398F96;
+  }
+  input:checked ~ .radio-mask:before{
+    transform: scale(1);
+  }
+}
+.check-cus{
+  margin-bottom: 0;
+  font-size: 16px;
+  input{
+    display: none;
+  }
+  .check-mask{
+    width: 20px;
+    height: 20px;
+    background: #FCFCFC;
+    border: 2px solid rgba(111, 118, 126, 0.4);
+    border-radius: 6px;
+    display: inline-block;
+    vertical-align: text-bottom;
+    margin-right: 5px;
+    position: relative;
+    &:before{
+      content: '';
+      width: 10px;
+      height: 6px;
+      border-left: 2px solid #ffffff;
+      border-bottom: 2px solid #ffffff;
+      position: absolute;
+      top: -2px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      transition: all 0.1s linear;
+      transform: rotate(-45deg) scale(0);
+      display: block;
+    }
+  }
+  input:checked ~ .check-mask{
+    border: 0;
+    background: linear-gradient(91deg, #6EDAE3 4.57%, #AA9BF3 100%);
+  }
+  input:checked ~ .check-mask:before{
+    transform: rotate(-45deg) scale(1);
+  }
+}
+.fz-14{
+  font-size: 14px;
+}
+.fz-15{
+  font-size: 15px;
+}
+.fz-16{
+  font-size: 16px;
+}
+@media (min-width: 1367px){
+  .row-30{
+    margin: 0 -30px;
+  }
+  .pdd-30{
+    padding: 0 30px;
+  }
+}
+
+.btn-no-ar:after{
+  display: none;
+}
+
+.text-dark{
+  color: #101828 !important;
+}
+.row-5{
+  margin: 0 -5px;
+}
+.pdd-5{
+  padding: 0 5px;
+}
+.inputCl{
+  width: 100%;
+  img{
+    display: none;
+  }
+  input{
+    display: block;
+    width: 100%;
+  }
+}
+.btn-edit-text{
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: #F7F8FF;
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  border-radius: 8px;
+  text-align: center;
+  line-height: 38px;
+  border: 0;
+  position: relative;
+  cursor: pointer;
+  svg{
+    width: 20px;
+  }
+  span{
+    position: absolute;
+    background: linear-gradient(91deg, #6EDAE3 4.57%, #AA9BF3 100%);
+    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: 1;
+  }
+  p{
+    position: relative;
+    z-index: 2;
+    color: #000000;
+    font-family: "Times New Roman";
+    font-weight: bold;
+  }
+  input{
+    display: none;
+  }
+  input:checked ~ span{
+    display: block;
+  }
+  input:checked ~ span ~ p{
+    color: #ffffff;
+    vertical-align: middle;
+  }
+}
+
+.btn__arrow-up{
+  background: #F7F8FF url("../images/icon/Arrow-Up-Outlined.png") no-repeat center right 15px/ 14px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 15px;
+  line-height: 21px;
+  color: #101828;
+  font-weight: normal;
+  border: 0;
+  outline: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  &:focus, &:active{
+    background: #cccccc url("../images/icon/Arrow-Up-Outlined.png") no-repeat center right 15px/ 14px;
+  }
+}
+
+.btn__arrow-down{
+  background: #F7F8FF url("../images/icon/arrow-down.svg") no-repeat center right 15px/ 20px;
+  border-radius: 8px;
+  padding: 8px 15px;
+  font-size: 15px;
+  line-height: 21px;
+  color: #101828;
+  font-weight: normal;
+  border: 0;
+  outline: none;
+  display: block;
+  width: 100%;
+  text-align: left;
+  &:focus, &:active{
+    background: #cccccc url("../images/icon/arrow-down.svg") no-repeat center right 15px/ 20px;
+  }
+}
